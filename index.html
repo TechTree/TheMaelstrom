@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maelstrom: Lair of the Tyrant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Cinzel:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav id="main-nav">
+    <div class="nav-inner">
+      <div class="nav-brand">The Maelstrom</div>
+      <ul class="nav-links">
+        <li><a href="#hero"           class="nav-link active" data-target="hero">Campaign</a></li>
+        <li><a href="#standings" class="nav-link" data-target="standings">Standings</a></li>
+        <li><a href="#rosters"   class="nav-link" data-target="rosters">Rosters</a></li>
+        <li><a href="#rules"     class="nav-link" data-target="rules">Rules</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== ZONE 1: GALAXY MAP HERO ===================== -->
+  <section id="hero" class="zone zone-space">
+    <!-- Hero video background -->
+    <video id="hero-video" class="hero-video-bg" autoplay muted loop playsinline preload="auto">
+      <source src="public/videos/hero-background.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay"></div>
+
+    <!-- Sound toggle -->
+    <button id="sound-toggle" class="sound-toggle" title="Toggle audio" aria-label="Toggle audio">
+      <span class="sound-icon sound-off">🔇</span>
+      <span class="sound-icon sound-on" style="display:none">🔊</span>
+    </button>
+
+    <!-- Hero text — sticky so it "floats" as you scroll -->
+    <div class="hero-content">
+      <div class="hero-the">Warhammer 40,000</div>
+      <span class="hero-title">The Maelstrom</span>
+      <div class="hero-rule"></div>
+      <div class="hero-sub">Lair of the Tyrant</div>
+      <div class="hero-tagline">Into the Nightmare Realm &mdash; A Narrative 40K Campaign</div>
+    </div>
+
+    <!-- Campaign overview (below fold in same zone) -->
+    <div class="campaign-info" id="campaign-info">
+      <blockquote class="flavor-text">
+        From the heart of the Maelstrom, Huron Blackheart's Red Corsairs surge forth alongside
+        the newly revealed Aeldari Corsairs. In this crucible of war, six warlords clash for
+        supremacy in the lawless void between realspace and the warp.
+      </blockquote>
+
+
+      <div class="faction-cards" id="faction-cards"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ZONE 2: STANDINGS (galaxy map bg) ===================== -->
+  <section id="standings" class="zone zone-standings-galaxy">
+    <!-- Galaxy map zoomed in as background -->
+    <div class="galaxy-map-bg-layer" id="galaxy-map"></div>
+    <div class="galaxy-map-overlay"></div>
+
+    <div class="zone-content zone-content-bottom">
+      <p class="section-subtitle">Who Reigns Supreme</p>
+      <h2 class="section-title">Campaign Standings</h2>
+      <div class="section-title-bar"></div>
+      <div id="leaderboard"></div>
+
+      <!-- Pirate Booty rolls -->
+      <p class="section-subtitle" style="margin-top:4rem">Spoils of War</p>
+      <h2 class="section-title">Pirate Booty Rolls</h2>
+      <div class="section-title-bar"></div>
+      <div id="booty-rolls"></div>
+    </div>
+  </section>
+
+  <!-- ===================== ZONE 3: ATMOSPHERE / ROSTERS ===================== -->
+  <section id="rosters" class="zone zone-atmo">
+    <div class="cloud-layer cloud-back"></div>
+    <div class="cloud-layer cloud-mid"></div>
+    <div class="cloud-layer cloud-front"></div>
+    <div class="lightning-layer" id="lightning"></div>
+
+    <div class="zone-content">
+      <p class="section-subtitle">The Warlords</p>
+      <h2 class="section-title">Army Rosters</h2>
+      <div class="section-title-bar"></div>
+      <div class="rosters-grid" id="rosters-grid"></div>
+    </div>
+  </section>
+
+
+
+  <!-- ===================== ZONE 5: RULES ===================== -->
+  <section id="rules" class="zone zone-rules">
+    <div class="zone-content">
+
+      <!-- Campaign Overview -->
+      <p class="section-subtitle">How It Works</p>
+      <h2 class="section-title">Campaign Rules</h2>
+      <div class="section-title-bar"></div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:1.5rem;margin-bottom:4rem">
+        <div class="book-panel">
+          <h3>Playing the Campaign</h3>
+          <p>Play a Raid and Ruin campaign with two or more players. Each battle should be played using one of the missions in this book. Players gain Notoriety Points (NP) during the battle through the Spoils of War and by completing challenges.</p>
+        </div>
+        <div class="book-panel">
+          <h3>Winning the Campaign</h3>
+          <p>Each title has a value in NP listed in the final columns of the table. To determine a player's NP, add the value of the titles they have claimed (at most one title from each column) to the number they have for their victories. The player with the highest NP at the end wins. Ties broken by victories, then titles.</p>
+        </div>
+        <div class="book-panel">
+          <h3>No Corsair Left Behind</h3>
+          <p>This campaign relies on each player playing the same number of battles. If a player has fewer battles played at the end, they can play a mission but will not receive NP or titles for playing, and their victory count will not increase if they win.</p>
+        </div>
+        <div class="book-panel">
+          <h3>Challenges</h3>
+          <p>Whenever a player completes the first title for a challenge in the table, they earn the challenge for a second time; instead of taking the second title in that column. When they complete it a third time, they earn the final title. NP for each challenge are not cumulative — players have the choice of the highest title achieved for each challenge.</p>
+        </div>
+        <div class="book-panel">
+          <h3>Spoils of War</h3>
+          <p>After each battle, after gaining any Notoriety points for victory and completing challenges, each player identifies their Spoils of War. Roll two D6 for a D66 result. The first represents the tens, the second the units. Once a player has made all of their rolls, they choose one result — until end of the campaign, only one artisan item from the Maelstrom may be looted. Their choice will only last for the next battle.</p>
+        </div>
+        <div class="book-panel">
+          <h3>Ransack and Ravage</h3>
+          <p>The missions in this book use objective markers to represent prizes and plunder the players are fighting over. Each time a unit completes any action concluding with the Secure the Plunder step, it can leave the battlefield from the edge of your opponent's table. Units carrying an objective marker cannot use Fire Overwatch or Heroic Intervention stratagems.</p>
+        </div>
+      </div>
+
+      <!-- Scoring Table -->
+      <p class="section-subtitle">The Score Sheet</p>
+      <h2 class="section-title">Campaign Scoring</h2>
+      <div class="section-title-bar"></div>
+      <div id="scoring-table-wrap"></div>
+
+      <!-- Missions -->
+      <p class="section-subtitle">Raid and Ruin</p>
+      <h2 class="section-title">Missions</h2>
+      <div class="section-title-bar"></div>
+      <div class="missions-grid" style="margin-bottom:4rem" id="missions-grid"></div>
+
+      <!-- Stratagems -->
+      <p class="section-subtitle">Strategic Options</p>
+      <h2 class="section-title">Stratagems</h2>
+      <div class="section-title-bar"></div>
+      <div class="stratagem-grid" style="margin-bottom:4rem" id="strat-grid"></div>
+
+      <!-- Spoils of War reference table -->
+      <p class="section-subtitle">Reference</p>
+      <h2 class="section-title">Spoils of War Table</h2>
+      <div class="section-title-bar"></div>
+      <div id="spoils-table-wrap" style="margin-bottom:2rem"></div>
+
+    </div>
+    <footer class="campaign-footer">
+      The Maelstrom: Lair of the Tyrant &mdash; Private Narrative Campaign &mdash; Fan Project
+    </footer>
+  </section>
+
+  <script src="js/data.js"></script>
+  <script src="js/galaxy-canvas.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    (function() {
+      const btn   = document.getElementById('sound-toggle');
+      const video = document.getElementById('hero-video');
+      if (!btn || !video) return;
+      btn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        btn.querySelector('.sound-off').style.display = video.muted ? '' : 'none';
+        btn.querySelector('.sound-on').style.display  = video.muted ? 'none' : '';
+        // restart if needed so audio begins from current position
+        if (!video.muted && video.paused) video.play();
+      });
+    })();
+  </script>
+</body>
+</html>
