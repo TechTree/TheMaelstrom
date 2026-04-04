@@ -76,8 +76,8 @@ const CAMPAIGN_DATA = {
       ]
     },
     {
-      id: 'pharoahwolf',
-      handle: 'Pharoah Wolf',
+      id: 'pharaohwolf',
+      handle: 'Pharaoh Wolf',
       notoriety: [1, 0, 0, 0, 0, 0, 0],
       bootyNP: 0,
       faction: 'redcorsairs',
@@ -179,7 +179,7 @@ const CAMPAIGN_DATA = {
       date: '2026-03-13',
       mission: 'Heist',
       attacker: 'ocean',
-      defender: 'pharoahwolf',
+      defender: 'pharaohwolf',
       attackerScore: 15,
       defenderScore: 3,
       notes: 'Ocean dominated the objective race, destroying the Warlord in melee combat.',
@@ -191,7 +191,7 @@ const CAMPAIGN_DATA = {
           { desc: 'Warlord in deployment zone',       points: 3 },
           { desc: 'Control more objectives',          points: 3 },
         ],
-        pharoahwolf: [
+        pharaohwolf: [
           { desc: 'Warlord killed in melee',          points: 3 },
         ],
       }
@@ -281,8 +281,8 @@ const CAMPAIGN_DATA = {
   ---------------------------------------------------------- */
   bootyRolls: [
     // Vlad vs Ian (Previews)
-    { player: 'ocean',      battle: 'Ocean vs Pharoah Wolf', rolls: [32, 16, 41, 42, 15] },
-    { player: 'pharoahwolf',battle: 'Ocean vs Pharoah Wolf', rolls: [25] },
+    { player: 'ocean',      battle: 'Ocean vs Pharaoh Wolf', rolls: [32, 16, 41, 42, 15] },
+    { player: 'pharaohwolf',battle: 'Ocean vs Pharaoh Wolf', rolls: [25] },
     // Vlad vs Justin
     { player: 'ocean',      battle: 'Ocean vs Baldee',       rolls: [] }, // included in above
     { player: 'baldee',     battle: 'Ocean vs Baldee',       rolls: [51] },
