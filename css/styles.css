@@ -140,10 +140,10 @@ img { max-width: 100%; display: block; }
   background: rgba(0,0,0,.70);
   border: 2px solid rgba(255,255,255,.35);
   border-radius: 50%;
-  width: 5rem; height: 5rem;
+  width: 3.5rem; height: 3.5rem;
   display: flex; align-items: center; justify-content: center;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.4rem;
   transition: background .2s, border-color .2s, transform .15s;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 20px rgba(0,0,0,.6);
@@ -388,8 +388,8 @@ img { max-width: 100%; display: block; }
 /* ---------- roster cards ---------- */
 .rosters-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
 }
 .roster-card {
   border: 1px solid var(--border);
@@ -945,7 +945,7 @@ tbody tr td.sc-title-cell:nth-child(4) .sc-title-name { color: #c0392b; }   /* T
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .rosters-grid { grid-template-columns: repeat(3, 1fr); }
+  .rosters-grid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
   .bd-breakdown { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
