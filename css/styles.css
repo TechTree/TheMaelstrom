@@ -405,22 +405,22 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 20px var(--fc);
 }
 .roster-head {
-  padding: 1.25rem 1.5rem;
+  padding: .9rem 1rem;
   background: rgba(0,0,0,.3);
   border-left: 4px solid var(--fc);
 }
 .rh-handle {
   font-family: var(--font-display);
-  font-size: 1.3rem; font-weight: 700; color: var(--white);
+  font-size: 1rem; font-weight: 700; color: var(--white);
 }
-.rh-army { font-size: .85rem; color: var(--txt-dim); font-style: italic; margin-top: .1rem; }
-.rh-meta { display: grid; gap: .3rem; margin-top: .75rem; font-size: .82rem; }
-.rh-row { display: flex; justify-content: space-between; }
+.rh-army { font-size: .75rem; color: var(--txt-dim); font-style: italic; margin-top: .1rem; }
+.rh-meta { display: grid; gap: .25rem; margin-top: .6rem; font-size: .75rem; }
+.rh-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .2rem; }
 .rh-row span:first-child { color: var(--txt-dim); text-transform: uppercase; letter-spacing: 1px; }
 .rh-row span:last-child { color: var(--white); font-weight: 600; }
 
 .roster-toggle {
-  padding: .65rem 1rem;
+  padding: .5rem .75rem;
   border-top: 1px solid var(--border-dim);
   background: rgba(0,0,0,.2);
 }
