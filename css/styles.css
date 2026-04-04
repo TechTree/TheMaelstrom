@@ -388,8 +388,8 @@ img { max-width: 100%; display: block; }
 /* ---------- roster cards ---------- */
 .rosters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
 }
 .roster-card {
   border: 1px solid var(--border);
@@ -945,7 +945,7 @@ tbody tr td.sc-title-cell:nth-child(4) .sc-title-name { color: #c0392b; }   /* T
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .rosters-grid { grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); }
+  .rosters-grid { grid-template-columns: repeat(3, 1fr); }
   .bd-breakdown { grid-template-columns: 1fr; }
 }
 @media (max-width: 768px) {
