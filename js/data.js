@@ -54,7 +54,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'baldee',
       handle: 'Baldee',
-      notoriety: [1, 1, 0, 0, 0, 0, 0],
+      notoriety: [1, 1, 1, 1, 1, 1, 0],
       bootyNP: 0,
       faction: 'votann',
       army: 'Crucible',
@@ -148,7 +148,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'brian',
       handle: 'Brian',
-      notoriety: [0, 0, 0, 0, 0, 0, 0],
+      notoriety: [1, 0, 0, 0, 0, 0, 0],
       bootyNP: 0,
       faction: 'necrons',
       army: 'Crust of the Cursed Legion',
