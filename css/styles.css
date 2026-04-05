@@ -118,6 +118,18 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
 }
 
+/* --- fixed Maelstrom galaxy background (rules section and below) --- */
+.galaxy-bg-fixed {
+  position: fixed;
+  inset: 0;
+  width: 100vw; height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+.galaxy-bg-fixed.visible { opacity: 1; }
+
 /* --- hero video background --- */
 .hero-video-bg {
   position: absolute; inset: 0;
@@ -626,7 +638,8 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 .zone-rules {
   position: relative;
-  background: linear-gradient(180deg, #0e0910 0%, #0a070d 100%);
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(14,9,16,0.72) 0%, rgba(10,7,13,0.65) 100%);
   padding: 5rem 0;
 }
 
