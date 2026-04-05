@@ -225,10 +225,23 @@ const CAMPAIGN_DATA = {
       mission: 'Extraction',
       attacker: 'hahnzo',
       defender: 'baldee',
-      attackerScore: null,
-      defenderScore: null,
-      notes: 'Played — Awaiting Score Submission',
-      scoreBreakdown: {},
+      attackerScore: 3,
+      defenderScore: 20,
+      played: true,
+      notes: 'Baldee scored across the board — a dominant display that upgraded his top titles and unlocked four new ones.',
+      scoreBreakdown: {
+        hahnzo: [
+          { desc: 'Scourge — Warlord unit destroyed enemy in Fight phase', points: 3 },
+        ],
+        baldee: [
+          { desc: 'Scourge — Tier II (Warlord unit destroyed enemy in Fight phase)', points: 4 },
+          { desc: 'Vengeful — Tier II (enemy Warlord destroyed)',                    points: 4 },
+          { desc: 'Opportunist (victor of mission)',                                  points: 3 },
+          { desc: 'Cruel (all enemy units below half-strength or destroyed)',         points: 3 },
+          { desc: 'Brash (Warlord in enemy deployment zone at battle end)',           points: 3 },
+          { desc: 'Grasping (controlled more objectives at battle end)',              points: 3 },
+        ],
+      },
     },
   ],
 
@@ -280,15 +293,11 @@ const CAMPAIGN_DATA = {
      From the handwritten sheet
   ---------------------------------------------------------- */
   bootyRolls: [
-    // Vlad vs Ian (Previews)
+    // Game 1 — Ocean vs Pharaoh Wolf
     { player: 'ocean',      battle: 'Ocean vs Pharaoh Wolf', rolls: [32, 16, 41, 42, 15] },
     { player: 'pharaohwolf',battle: 'Ocean vs Pharaoh Wolf', rolls: [25] },
-    // Vlad vs Justin
-    { player: 'ocean',      battle: 'Ocean vs Baldee',       rolls: [] }, // included in above
-    { player: 'baldee',     battle: 'Ocean vs Baldee',       rolls: [51] },
-    // Brian vs Justin
-    { player: 'hahnzo',     battle: 'Baldee vs Hahnzo',      rolls: [34] },
-    { player: 'baldee',     battle: 'Baldee vs Hahnzo',      rolls: [61, 64, 32, 53, 44] },
+    // Game 2 — Ocean vs Baldee (rolls pending)
+    // Game 3 — Hahnzo vs Baldee (rolls pending)
   ],
 
   /* ----------------------------------------------------------
@@ -518,7 +527,7 @@ function calculateStandings() {
     // Battles played
     const battlesPlayed = battles.filter(b =>
       (b.attacker === p.id || b.defender === p.id) &&
-      b.attackerScore !== null
+      (b.attackerScore !== null || b.played === true)
     ).length;
 
     const totalPoints = notorietyNP + (p.bootyNP || 0);
