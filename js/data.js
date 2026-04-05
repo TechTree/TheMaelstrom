@@ -54,7 +54,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'baldee',
       handle: 'Baldee',
-      notoriety: [1, 1, 1, 1, 1, 1, 0],
+      notoriety: [2, 2, 1, 1, 1, 1, 0],
       bootyNP: 0,
       faction: 'votann',
       army: 'Crucible',
@@ -287,7 +287,7 @@ const CAMPAIGN_DATA = {
     { player: 'ocean',      battle: 'Ocean vs Baldee',       rolls: [] }, // included in above
     { player: 'baldee',     battle: 'Ocean vs Baldee',       rolls: [51] },
     // Brian vs Justin
-    { player: 'brian',      battle: 'Baldee vs Hahnzo',      rolls: [34] },
+    { player: 'hahnzo',     battle: 'Baldee vs Hahnzo',      rolls: [34] },
     { player: 'baldee',     battle: 'Baldee vs Hahnzo',      rolls: [61, 64, 32, 53, 44] },
   ],
 
