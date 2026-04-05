@@ -296,8 +296,11 @@ const CAMPAIGN_DATA = {
     // Game 1 — Ocean vs Pharaoh Wolf
     { player: 'ocean',      battle: 'Ocean vs Pharaoh Wolf', rolls: [32, 16, 41, 42, 15] },
     { player: 'pharaohwolf',battle: 'Ocean vs Pharaoh Wolf', rolls: [25] },
-    // Game 2 — Ocean vs Baldee (rolls pending)
-    // Game 3 — Hahnzo vs Baldee (rolls pending)
+    // Game 2 — Ocean vs Baldee
+    { player: 'baldee',     battle: 'Ocean vs Baldee',       rolls: [51] },
+    // Game 3 — Hahnzo vs Baldee
+    { player: 'hahnzo',     battle: 'Baldee vs Hahnzo',      rolls: [34] },
+    { player: 'baldee',     battle: 'Baldee vs Hahnzo',      rolls: [61, 64, 32, 53, 44] },
   ],
 
   /* ----------------------------------------------------------
