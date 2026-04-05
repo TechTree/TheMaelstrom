@@ -103,7 +103,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'hahnzo',
       handle: 'Hahnzo',
-      notoriety: [0, 0, 0, 0, 0, 0, 0],
+      notoriety: [1, 0, 0, 0, 0, 0, 0],
       bootyNP: 0,
       faction: 'emperorschildren',
       army: 'Court Ball',
@@ -148,7 +148,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'brian',
       handle: 'Brian',
-      notoriety: [1, 0, 0, 0, 0, 0, 0],
+      notoriety: [0, 0, 0, 0, 0, 0, 0],
       bootyNP: 0,
       faction: 'necrons',
       army: 'Crust of the Cursed Legion',
