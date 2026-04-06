@@ -54,7 +54,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'baldee',
       handle: 'Baldee',
-      notoriety: [2, 2, 1, 1, 1, 1, 0],
+      notoriety: [2, 2, 0, 1, 1, 1, 0],
       bootyNP: 0,
       faction: 'votann',
       army: 'Crucible',
@@ -226,7 +226,7 @@ const CAMPAIGN_DATA = {
       attacker: 'hahnzo',
       defender: 'baldee',
       attackerScore: 3,
-      defenderScore: 20,
+      defenderScore: 17,
       played: true,
       notes: 'Baldee scored across the board — a dominant display that upgraded his top titles and unlocked four new ones.',
       scoreBreakdown: {
@@ -236,7 +236,6 @@ const CAMPAIGN_DATA = {
         baldee: [
           { desc: 'Scourge — Tier II (Warlord unit destroyed enemy in Fight phase)', points: 4 },
           { desc: 'Vengeful — Tier II (enemy Warlord destroyed)',                    points: 4 },
-          { desc: 'Opportunist (victor of mission)',                                  points: 3 },
           { desc: 'Cruel (all enemy units below half-strength or destroyed)',         points: 3 },
           { desc: 'Brash (Warlord in enemy deployment zone at battle end)',           points: 3 },
           { desc: 'Grasping (controlled more objectives at battle end)',              points: 3 },
