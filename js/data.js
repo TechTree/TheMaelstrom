@@ -54,8 +54,8 @@ const CAMPAIGN_DATA = {
     {
       id: 'baldee',
       handle: 'Baldee',
-      notoriety: [2, 2, 0, 1, 1, 1, 0],
-      bootyNP: 0,
+      notoriety: [3, 2, 1, 2, 1, 2, 1],
+      bootyNP: 1,
       faction: 'votann',
       army: 'Crucible',
       points: 1000,
@@ -78,7 +78,7 @@ const CAMPAIGN_DATA = {
     {
       id: 'pharaohwolf',
       handle: 'Pharaoh Wolf',
-      notoriety: [1, 0, 0, 0, 0, 0, 0],
+      notoriety: [1, 0, 0, 0, 0, 0, 1],
       bootyNP: 0,
       faction: 'redcorsairs',
       army: 'Renegade Raiders',
@@ -220,6 +220,28 @@ const CAMPAIGN_DATA = {
       }
     },
     {
+      id: 4,
+      date: '2026-05-29',
+      mission: 'Unknown',
+      attacker: 'baldee',
+      defender: 'pharaohwolf',
+      attackerScore: 19,
+      defenderScore: 3,
+      notes: 'Baldee stormed through the field — upgrading to Gyre\'s Blade and unlocking three new titles. Pharaoh Wolf earned his first Shrewd.',
+      scoreBreakdown: {
+        baldee: [
+          { desc: "Scourge — Tier III / Gyre's Blade (Warlord unit destroyed enemy in Fight phase)", points: 5 },
+          { desc: 'Opportunist — Tier I (victor of mission)',                                        points: 3 },
+          { desc: 'Cruel — Tier II / Bloodthirsty (all enemy units below half-strength)',            points: 4 },
+          { desc: 'Grasping — Tier II / Profiteer (controlled more objectives)',                     points: 4 },
+          { desc: 'Shrewd — Tier I (Warlord unit Secured the Plunder)',                             points: 3 },
+        ],
+        pharaohwolf: [
+          { desc: 'Shrewd — Tier I (Warlord unit Secured the Plunder)',                             points: 3 },
+        ],
+      },
+    },
+    {
       id: 3,
       date: '2026-04-04',
       mission: 'Extraction',
@@ -300,6 +322,7 @@ const CAMPAIGN_DATA = {
     // Game 3 — Hahnzo vs Baldee
     { player: 'hahnzo',     battle: 'Baldee vs Hahnzo',      rolls: [34] },
     { player: 'baldee',     battle: 'Baldee vs Hahnzo',      rolls: [61, 64, 32, 53, 44] },
+    // Game 4 — Baldee vs Pharaoh Wolf (rolls pending)
   ],
 
   /* ----------------------------------------------------------
