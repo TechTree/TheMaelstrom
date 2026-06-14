@@ -35,8 +35,8 @@ const CAMPAIGN_DATA = {
       champion: 'Anakhin Skyrunner',
       championRole: 'Autarch on Skyrunner (Warlord)',
       // notoriety[i] = tier earned for condition i (0=none,1=3NP,2=4NP,3=5NP)
-      notoriety: [2, 2, 0, 2, 1, 2, 0],
-      bootyNP: 1,
+      notoriety: [3, 3, 1, 3, 1, 3, 1],
+      bootyNP: 2,
       units: [
         { name: 'Autarch',                  points: 85,  gear: 'Star Glaive, Dragon Fusion Gun' },
         { name: 'Anakhin Skyrunner (Warlord)',points: 80, gear: 'Winds of War, Superlative Strategist, Star Lance, Dragon Fusion Gun, 2x Dragon Fusion Pistol' },
